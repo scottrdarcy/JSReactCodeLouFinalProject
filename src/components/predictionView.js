@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import {} from "react-bootstrap";
 
-const Tables = () => (
+function PredictionView(props) {
+  return <div>{props.entry}</div>;
+}
 
-    ); 
-    export default Tables;
+export default PredictionView;

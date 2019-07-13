@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import React, { Root, Component } from "react";
-import { Container, Dropdown, Form, Button, Jumbotron } from "react-bootstrap";
 import "./App.css";
 
-function App() {
+function Home() {
   return (
     <Container>
       <Jumbotron>
@@ -31,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
