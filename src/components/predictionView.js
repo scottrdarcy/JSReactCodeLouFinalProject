@@ -1,8 +1,16 @@
 import React from "react";
-import {} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
-function PredictionView(props) {
-  return <div>{props.entry}</div>;
+function PredictionView(prediction, editMode) {
+  const goToEditMode = () => {
+    editMode(prediction.id);
+  };
+  return (
+    <div>
+      {prediction.entry}
+      <Button onClick={goToEditMode}>edit</Button>
+    </div>
+  );
 }
 
 export default PredictionView;

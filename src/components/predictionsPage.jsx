@@ -9,6 +9,7 @@ import {
   Jumbotron
 } from "react-bootstrap";
 import PredictionView from "./predictionView";
+import PredictionEdit from "./predictionEdit";
 import MyJsonService from "../services/MyJsonService";
 
 // var Prediction = React.createClass({
@@ -20,7 +21,26 @@ class PredictionsPage extends React.Component {
   constructor() {
     super();
     this.state = { predictions: [] };
+
+    this.editMode = id => {
+      this.setState(oldState => {
+        const newState = oldState;
+        const prediction = newState.predictions.filter(p => p.id == id)[0];
+        prediction.isEditMode = true;
+        return newState;
+      });
+    };
+
+    this.viewMode = id =>
+      //TODO: add updatePrediction to Service
+      this.setState(oldState => {
+        const newState = oldState;
+        const prediction = newState.predictions.filter(p => p.id == id)[0];
+        prediction.isEditMode = false;
+        return newState;
+      });
   }
+
   async componentDidMount() {
     //TODO: load predictions from myJson;
     //const predictions = await myJsonService.GetPredictions();
@@ -35,9 +55,11 @@ class PredictionsPage extends React.Component {
   }
 
   render() {
-    const rows = this.state.predictions.map(
-      prediction => new PredictionView(prediction)
-    );
+    const rows = this.state.predictions.map(prediction => {
+      if (prediction.isEditMode)
+        return new PredictionEdit(prediction, this.viewMode);
+      else return new PredictionView(prediction, this.editMode);
+    });
     return <Container>{rows}</Container>;
   }
   //has flex grid/table
