@@ -1,8 +1,5 @@
-/*@import "../node_modules/bootstrap/scss/bootstrap";*/
-
 body {
-  margin: 7px;
-  background-color: rgb(23, 90, 166);
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
