@@ -54,10 +54,26 @@ class PredictionsPage extends React.Component {
     // });
   }
 
+  // updatePrediction(newPrediction) {
+  //   this.setState(oldState => {
+  //     //newState.predictions.
+  //     var predictions = oldState.predictions;
+  //     newState = { predictions };
+  //     newState.predictions.filter(p => p.id == predicton.id)[0] = newPrediction;
+  //     //prediction = newPredicton;
+  //     return newState;
+  //   });
+  //   //TODO call update api
+  // }
+
   render() {
     const rows = this.state.predictions.map(prediction => {
       if (prediction.isEditMode)
-        return new PredictionEdit(prediction, this.viewMode);
+        return new PredictionEdit(
+          prediction,
+          this.viewMode,
+          this.updatePrediction
+        );
       else return new PredictionView(prediction, this.editMode);
     });
     return <Container>{rows}</Container>;
