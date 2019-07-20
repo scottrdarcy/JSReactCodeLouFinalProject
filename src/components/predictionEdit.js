@@ -58,8 +58,8 @@ function PredictionEdit(prediction, viewMode, savePrediction) {
               </InputGroup>
             </Col>
             <Col xs="4">
-              <Button style={buttonStyle} onClick={cancel}>
-                Cancel
+              <Button style={buttonStyle} onClick={save}>
+                Save
               </Button>
             </Col>
           </Row>
@@ -81,9 +81,9 @@ function PredictionEdit(prediction, viewMode, savePrediction) {
               </InputGroup>
             </Col>
             <Col xs="4">
-              <Button style={buttonStyle} onClick={save}>
-                Save
-              </Button>
+              {/* <Button style={buttonStyle} onClick={cancel}>
+                Cancel
+              </Button> */}
             </Col>
           </Row>
           <Row style={rowStyle}>

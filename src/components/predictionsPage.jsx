@@ -36,6 +36,8 @@ class PredictionsPage extends React.Component {
         const newState = oldState;
         newState.predictions = newState.predictions.filter(p => p.id != id);
 
+        MyJsonService.savePredictions(newState.predictions);
+
         return newState;
       });
     };
@@ -50,16 +52,20 @@ class PredictionsPage extends React.Component {
       });
 
     this.updatePrediction = editPrediction => {
-      // this.setState(oldState => {
-      //   const newState = oldState;
-      //   newState.predictions.forEach(element => {
-      //     if (element.id == editPrediction.id) {
-      //       element = editPrediction;
-      //     }
-      //   });
-      //   return newState;
-      // });
-      //TODO call update api
+      this.setState(oldState => {
+        const newState = oldState;
+        newState.predictions.forEach(element => {
+          if (element.id == editPrediction.id) {
+            element = editPrediction;
+            element.isEditMode = false;
+          }
+        });
+        return newState;
+      });
+
+      MyJsonService.savePredictions(this.state.predictions);
+
+      ////TODO call update api
     };
   }
 
@@ -67,8 +73,8 @@ class PredictionsPage extends React.Component {
     //TODO: load predictions from myJson;
     //const predictions = await myJsonService.GetPredictions();
 
-    const jsonService = new MyJsonService();
-    const predictions = await jsonService.getPredictions();
+    const predictions = await MyJsonService.getPredictions();
+    console.log(predictions);
     this.setState(oldState => (oldState.predictions = predictions));
 
     // const predictions = this.state.predictions.map(prediction => {
