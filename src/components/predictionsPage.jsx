@@ -31,6 +31,15 @@ class PredictionsPage extends React.Component {
       });
     };
 
+    this.remove = id => {
+      this.setState(oldState => {
+        const newState = oldState;
+        newState.predictions = newState.predictions.filter(p => p.id != id);
+
+        return newState;
+      });
+    };
+
     this.viewMode = id =>
       //TODO: add updatePrediction to Service
       this.setState(oldState => {
@@ -39,6 +48,19 @@ class PredictionsPage extends React.Component {
         prediction.isEditMode = false;
         return newState;
       });
+
+    this.updatePrediction = editPrediction => {
+      // this.setState(oldState => {
+      //   const newState = oldState;
+      //   newState.predictions.forEach(element => {
+      //     if (element.id == editPrediction.id) {
+      //       element = editPrediction;
+      //     }
+      //   });
+      //   return newState;
+      // });
+      //TODO call update api
+    };
   }
 
   async componentDidMount() {
@@ -54,18 +76,6 @@ class PredictionsPage extends React.Component {
     // });
   }
 
-  // updatePrediction(newPrediction) {
-  //   this.setState(oldState => {
-  //     //newState.predictions.
-  //     var predictions = oldState.predictions;
-  //     newState = { predictions };
-  //     newState.predictions.filter(p => p.id == predicton.id)[0] = newPrediction;
-  //     //prediction = newPredicton;
-  //     return newState;
-  //   });
-  //   //TODO call update api
-  // }
-
   render() {
     const rows = this.state.predictions.map(prediction => {
       if (prediction.isEditMode)
@@ -74,7 +84,7 @@ class PredictionsPage extends React.Component {
           this.viewMode,
           this.updatePrediction
         );
-      else return new PredictionView(prediction, this.editMode);
+      else return new PredictionView(prediction, this.editMode, this.remove);
     });
     return <Container>{rows}</Container>;
   }

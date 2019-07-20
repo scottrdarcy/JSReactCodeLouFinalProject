@@ -1,9 +1,13 @@
 import React from "react";
 import { Button, Table, Container, Row, Col, Card } from "react-bootstrap";
 
-function PredictionView(prediction, editMode) {
+function PredictionView(prediction, editMode, remove) {
   const goToEditMode = () => {
     editMode(prediction.id);
+  };
+
+  const removePrediction = () => {
+    remove(prediction.id);
   };
 
   const cardStyle = {
@@ -34,7 +38,9 @@ function PredictionView(prediction, editMode) {
               <label>{prediction.symbol}</label>
             </Col>
             <Col xs="4">
-              <Button style={buttonStyle}>Remove</Button>
+              <Button style={buttonStyle} onClick={removePrediction}>
+                Remove
+              </Button>
             </Col>
           </Row>
           <Row style={rowStyle}>
@@ -45,7 +51,7 @@ function PredictionView(prediction, editMode) {
               <label>{prediction.action}</label>
             </Col>
             <Col xs="4">
-              <Button style={buttonStyle} onClick="goToEditMode">
+              <Button style={buttonStyle} onClick={goToEditMode}>
                 Edit
               </Button>
             </Col>
