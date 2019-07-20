@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Container, Dropdown, Form, Jumbotron, Button } from "react-bootstrap";
 import App from "./App";
 import PredictionsPage from "./components/predictionsPage";
+import MarketHours from "./components/MarketHours";
 
 function Index() {
   return <h2>Home</h2>;
@@ -33,11 +34,20 @@ function AppRouter() {
       <Route exact path="/" component={App} />
       <Route path="/journal" component={About} />
       <Route path="/predictions" component={PredictionsPage} />
+      <Route path="/api" component={MarketHours} />
     </Router>
   );
 }
 
 function About() {
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
+}
+
+function API() {
   return (
     <div>
       <h2>About</h2>
