@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Table, Container, Row, Col, Card } from "react-bootstrap";
+import { Button, Container, Row, Col, Card } from "react-bootstrap";
 
 function PredictionView(prediction, editMode, remove) {
   const goToEditMode = () => {
@@ -45,7 +45,7 @@ function PredictionView(prediction, editMode, remove) {
           </Row>
           <Row style={rowStyle}>
             <Col xs="4">
-              <h5 style={headerStyle}>Action:</h5>
+              <h5 style={headerStyle}>Topic:</h5>
             </Col>
             <Col xs="4">
               <label>{prediction.action}</label>

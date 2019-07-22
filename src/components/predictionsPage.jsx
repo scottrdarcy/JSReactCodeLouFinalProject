@@ -1,12 +1,7 @@
 import React, { PureComponent, Date } from "react";
 import {
   Container,
-  Row,
-  Col,
-  Dropdown,
-  Form,
-  Button,
-  Jumbotron
+  
 } from "react-bootstrap";
 import PredictionView from "./predictionView";
 import PredictionEdit from "./predictionEdit";

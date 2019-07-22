@@ -6,6 +6,7 @@ import {
   Button,
   Jumbotron,
   Col,
+  Card,
   Row
 } from "react-bootstrap";
 import "./App.css";
@@ -22,9 +23,10 @@ const buttonstyle = {
 
 function App() {
   return (
-    <Container>
-      <Jumbotron>
-        {/* <Form>
+    <div>
+      <Container>
+        <Jumbotron>
+          {/* <Form>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Stock Symbol:</Form.Label>
             <Form.Control type="email" placeholder="AMZN" />
@@ -44,40 +46,44 @@ function App() {
           </Form.Group>
         </Form> */}
 
-        <Row>
-          <Col>
-            <Button
-              style={buttonstyle}
-              // onClick={function() {
-              //   console.log("saving predictions");
-              //   MyJsonService.savePredictions([
-              //     {
-              //       id: uuidv4(),
-              //       symbol: "T",
-              //       days: 12,
-              //       action: "Buy",
-              //       entry: "My entry example text",
-              //       created: "Today",
-              //       updated: "Yesterday"
-              //     },
-              //     {
-              //       id: uuidv4(),
-              //       symbol: "VGT",
-              //       days: 12,
-              //       action: "Buy",
-              //       entry: "My entry example text2",
-              //       created: "Today",
-              //       updated: "Yesterday"
-              //     }
-              //   ]);
-              // }}
-            >
-              Submit
-            </Button>
-          </Col>
-        </Row>
-      </Jumbotron>
-    </Container>
+          <Row>
+            <Col>
+              <Button
+                style={buttonstyle}
+                // onClick={function() {
+                //   console.log("saving predictions");
+                //   MyJsonService.savePredictions([
+                //     {
+                //       id: uuidv4(),
+                //       symbol: "T",
+                //       days: 12,
+                //       action: "Buy",
+                //       entry: "My entry example text",
+                //       created: "Today",
+                //       updated: "Yesterday"
+                //     },
+                //     {
+                //       id: uuidv4(),
+                //       symbol: "VGT",
+                //       days: 12,
+                //       action: "Buy",
+                //       entry: "My entry example text2",
+                //       created: "Today",
+                //       updated: "Yesterday"
+                //     }
+                //   ]);
+                // }}
+              >
+                Submit
+              </Button>
+            </Col>
+          </Row>
+        </Jumbotron>
+      </Container>
+      <Card>
+        <div>Will Something go here?</div>
+      </Card>
+    </div>
   );
 }
 

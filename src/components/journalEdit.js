@@ -1,71 +1,129 @@
-//import { } from "react-bootstrap";
+import React from "react";
+import {
+  Button,
+  InputGroup,
+  FormControl,
+  Col,
+  Card,
+  Row,
+  Container
+} from "react-bootstrap";
 
-//const Journal = () => (
+function JournalEdit(journal, entryViewMode, saveentry) {
+  const cancel = () => {
+    entryViewMode(journal.id);
+  };
 
-//   );
+  const save = () => {
+    saveentry(editJournal);
+  };
 
-//export default Journal;
+  const editJournal = journal;
 
-import React, { Component } from "react";
-import { Container, Dropdown, Form, Jumbotron } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-//import Button from "./component/button";
-//import Menu from "./component/menu";
+  const cardStyle = {
+    margin: "10px"
+  };
 
-class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Jumbotron>
-          <h1>Scott's Stock Screener</h1>
+  const headerStyle = {
+    float: "right"
+  };
 
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Menu
-            </Dropdown.Toggle>
+  const buttonStyle = {
+    float: "right"
+  };
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="App.js">Home</Dropdown.Item>
-              <Dropdown.Item href="journal.js">Journal</Dropdown.Item>
-              <Dropdown.Item href="api.js">API</Dropdown.Item>
-              <Dropdown.Item href="table.js">Tables</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Jumbotron>
+  const rowStyle = {
+    margin: "2px"
+  };
 
-        <Jumbotron>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Topic</th>
-                <th>Explanation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colSpan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </Table>
-        </Jumbotron>
-      </Container>
-    );
-  }
+  return (
+    <Card style={cardStyle}>
+      <Card.Body>
+        <Container>
+          <Row style={rowStyle}>
+            <Col xs="4">
+              <h5 style={headerStyle}>Date:</h5>
+            </Col>
+            <Col xs="4">
+              {/* <InputGroup>
+                <FormControl
+                  placeholder="Date"
+                  aria-label="Date"
+                  aria-describedby="basic-addon2"
+                  //defaultValue={Date Event}
+                  onChange={function(changedEvent) {
+                    //date funtioneditPrediction.symbol = changedEvent.target.value;
+                  }}
+                />
+              </InputGroup> */}
+            </Col>
+            <Col xs="4">
+              <Button style={buttonStyle} onClick={save}>
+                Save
+              </Button>
+            </Col>
+          </Row>
+          <Row style={rowStyle}>
+            <Col xs="4">
+              <h5 style={headerStyle}>Topic:</h5>
+            </Col>
+            <Col xs="4">
+              <InputGroup>
+                <FormControl
+                  placeholder="Topic"
+                  aria-label="Topic"
+                  aria-describedby="basic-addon2"
+                  defaultValue={journal.topic}
+                  onChange={function(changedEvent) {
+                    editJournal.topic = changedEvent.target.value;
+                  }}
+                />
+              </InputGroup>
+            </Col>
+            <Col xs="4">
+              {/* <Button style={buttonStyle} onClick={cancel}>
+                Cancel
+              </Button> */}
+            </Col>
+          </Row>
+          <Row style={rowStyle}>
+            <Col xs="4">
+              <h5 style={headerStyle}>Description:&nbsp;</h5>
+            </Col>
+            <Col xs="8">
+              <InputGroup>
+                <FormControl
+                  placeholder="Description"
+                  aria-label="Description"
+                  aria-describedby="basic-addon2"
+                  defaultValue={journal.entry}
+                  onChange={function(changedEvent) {
+                    editJournal.entry = changedEvent.target.value;
+                  }}
+                />
+              </InputGroup>
+            </Col>
+          </Row>
+          <Row style={rowStyle}>
+            <Col xs="4">
+              <h5 style={headerStyle}>Created:</h5>
+            </Col>
+            <Col xs="4">
+              <label>{journal.created}</label>
+            </Col>
+          </Row>
+          <Row style={rowStyle}>
+            <Col xs="4">
+              <h5 style={headerStyle}>Updated:</h5>
+            </Col>
+            <Col xs="4">
+              <label>{journal.updated}</label>
+            </Col>
+          </Row>
+        </Container>
+      </Card.Body>
+    </Card>
+  );
 }
 
-export default App;
+export default JournalEdit;

@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Container, Dropdown, Form, Jumbotron, Button } from "react-bootstrap";
+import { Dropdown, Card, Jumbotron } from "react-bootstrap";
 import App from "./App";
 import PredictionsPage from "./components/predictionsPage";
+import JournalPage from "./components/journalpage";
 import MarketHours from "./components/MarketHours";
 
 function Index() {
@@ -32,7 +33,7 @@ function AppRouter() {
       </div>
 
       <Route exact path="/" component={App} />
-      <Route path="/journal" component={About} />
+      <Route path="/journal" component={JournalPage} />
       <Route path="/predictions" component={PredictionsPage} />
       <Route path="/api" component={MarketHours} />
     </Router>
@@ -40,19 +41,6 @@ function AppRouter() {
 }
 
 function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
+  return <h1>Could not get journal to work</h1>;
 }
-
-function API() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
 export default AppRouter;

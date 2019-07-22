@@ -2,6 +2,33 @@ import React from "react";
 import Uuid from "uuid";
 
 class MyJsonService {
+  static async getJournals() {
+    return [
+      {
+        id: "eb96c3e9-fe3c-4cf9-9e06-2c393c64da90",
+        symbol: "T",
+        days: 12,
+        action: "Buy",
+        entry: "My entry example text",
+        created: "Today",
+        updated: "Yesterday"
+      },
+      {
+        id: "3d6c89d5-f80c-44cb-a229-b9a35cc582fb",
+        symbol: "VGT",
+        days: 12,
+        action: "Buy",
+        entry: "My entry example text2",
+        created: "Today",
+        updated: "Yesterday"
+      }
+    ];
+  }
+
+  static async saveJournals() {
+    
+  }
+
   static async getPredictions() {
     var response = await fetch("https://api.myjson.com/bins/jqqod", {
       method: "GET",
