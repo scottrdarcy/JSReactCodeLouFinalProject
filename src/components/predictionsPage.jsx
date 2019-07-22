@@ -1,8 +1,5 @@
 import React, { PureComponent, Date } from "react";
-import {
-  Container,
-  
-} from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import PredictionView from "./predictionView";
 import PredictionEdit from "./predictionEdit";
 import MyJsonService from "../services/MyJsonService";
@@ -33,6 +30,14 @@ class PredictionsPage extends React.Component {
 
         MyJsonService.savePredictions(newState.predictions);
 
+        return newState;
+      });
+    };
+
+    this.add = () => {
+      this.setState(oldState => {
+        const newState = oldState;
+        newState.predictions.push({ isEditMode: true, created: new Date() });
         return newState;
       });
     };
@@ -87,7 +92,13 @@ class PredictionsPage extends React.Component {
         );
       else return new PredictionView(prediction, this.editMode, this.remove);
     });
-    return <Container>{rows}</Container>;
+
+    return (
+      <div>
+        <Button onClick={this.add}>Add prediction</Button>
+        <Container>{rows}</Container>
+      </div>
+    );
   }
   //has flex grid/table
   //eventually will use foreach on list in state that has all the predictions. this adds a <PredictionView> foreach prediction in this.state.predictions
