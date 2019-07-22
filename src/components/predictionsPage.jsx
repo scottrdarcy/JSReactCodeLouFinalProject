@@ -1,8 +1,9 @@
-import React, { PureComponent, Date } from "react";
+import React, { PureComponent } from "react";
 import { Container, Button } from "react-bootstrap";
 import PredictionView from "./predictionView";
 import PredictionEdit from "./predictionEdit";
 import MyJsonService from "../services/MyJsonService";
+import Uuid from "uuid/v4";
 
 // var Prediction = React.createClass({
 //   symbol,
@@ -37,7 +38,11 @@ class PredictionsPage extends React.Component {
     this.add = () => {
       this.setState(oldState => {
         const newState = oldState;
-        newState.predictions.push({ isEditMode: true, created: new Date() });
+        newState.predictions.push({
+          isEditMode: true,
+          created: new Date().toTimeString(),
+          id: new Uuid()
+        });
         return newState;
       });
     };
@@ -58,6 +63,7 @@ class PredictionsPage extends React.Component {
           if (element.id == editPrediction.id) {
             element = editPrediction;
             element.isEditMode = false;
+            element.updated = new Date().toTimeString();
           }
         });
         return newState;
