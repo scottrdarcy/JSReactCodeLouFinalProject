@@ -3,7 +3,7 @@ import Uuid from "uuid";
 
 class MyJsonService {
   static async getJournals() {
-    var response = await fetch("https://api.myjson.com/bins/z3rml", {
+    var response = await fetch("https://api.myjson.com/bins/ugstp", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -20,7 +20,7 @@ class MyJsonService {
     // }
     //console.log(predictions);
     //const mydata = JSON.stringify({ key: 1, value: predictions });
-    var response = await fetch("https://api.myjson.com/bins/z3rml", {
+    var response = await fetch("https://api.myjson.com/bins/ugstp", {
       method: "PUT",
       body: JSON.stringify(journals),
       headers: {
