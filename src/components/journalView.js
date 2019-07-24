@@ -34,10 +34,10 @@ function JournalView(journal, updateMode, removeEntry) {
         <Container>
           <Row style={rowStyle}>
             <Col xs="4">
-              <h5 style={headerStyle}> Date:</h5>
+              <h5 style={headerStyle}>Topic:</h5>
             </Col>
             <Col xs="4">
-              <label>{new Date().toTimeString()}</label>
+              <label>{journal.topic}</label>
             </Col>
             <Col xs="4">
               <Button style={buttonStyle} onClick={remove}>
@@ -48,24 +48,15 @@ function JournalView(journal, updateMode, removeEntry) {
 
           <Row style={rowStyle}>
             <Col xs="4">
-              <h5 style={headerStyle}>Topic:</h5>
+              <h5 style={headerStyle}>Description:&nbsp;</h5>
             </Col>
             <Col xs="4">
-              <label>{journal.topic}</label>
+              <label>{journal.entry}</label>
             </Col>
             <Col xs="4">
               <Button style={buttonStyle} onClick={goToUpdateEntry}>
                 Edit
               </Button>
-            </Col>
-          </Row>
-
-          <Row style={rowStyle}>
-            <Col xs="4">
-              <h5 style={headerStyle}>Description:&nbsp;</h5>
-            </Col>
-            <Col xs="8">
-              <label>{journal.entry}</label>
             </Col>
           </Row>
           <Row style={rowStyle}>

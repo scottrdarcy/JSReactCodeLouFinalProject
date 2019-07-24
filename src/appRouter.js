@@ -6,6 +6,14 @@ import PredictionsPage from "./components/predictionsPage";
 import JournalPage from "./components/journalpage";
 import MarketHours from "./components/MarketHours";
 
+
+
+
+
+
+
+
+
 function Index() {
   return <h2>Home</h2>;
 }

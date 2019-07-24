@@ -1,14 +1,6 @@
 import React, { Root, Component } from "react";
-import {
-  Container,
-  Dropdown,
-  Form,
-  Button,
-  Jumbotron,
-  Col,
-  Card,
-  Row
-} from "react-bootstrap";
+import { Container, Form, Jumbotron, Col, Row } from "react-bootstrap";
+//import { }
 import "./App.css";
 import MyJsonService from "./services/MyJsonService";
 import uuidv4 from "uuid/v4";
@@ -16,41 +8,215 @@ import uuidv4 from "uuid/v4";
 const buttonhome = {
   margin: "2px"
 };
-const buttonstyle = {
-  display: "flex",
-  justifyContent: "center"
-};
+
+
 
 function App() {
   return (
-    <div>
+    <div class="grid-container">
       <Container>
         <Jumbotron>
-          {/* <Form>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Stock Symbol:</Form.Label>
-            <Form.Control type="email" placeholder="AMZN" />
-          </Form.Group>
+          <Form>
+            <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Label>
+                <h4>Stock Symbol:</h4>
+              </Form.Label>
+              <Form.Control type="email" placeholder="AMZN" />
+            </Form.Group>
+            {/* PLan to change these to radio buttons and add more patterns*/}
+            {/*plan to also add a link here so that I can quickly look at chart pattern*/}
+            <h4>Stock Trend:</h4>
 
-          <Button style={buttonhome}>Buy Now</Button>
-          <Button style={buttonhome}>30 Days</Button>
-          <Button style={buttonhome}>60 Days</Button>
-          <Button style={buttonhome}>90 Days</Button>
-          <Button style={buttonhome}>Hold</Button>
-          <Button style={buttonhome}>Sell</Button>
-          <Button style={buttonhome}>Short</Button>
+            {/*<div class="row">
+            <div class="col-md-3"*/}
 
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Explain Reasoning of Selection:</Form.Label>
-            <Form.Control as="textarea" rows="5" />
-          </Form.Group>
-        </Form> */}
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Basing
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Bottom
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 1 +
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 2 +
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 3 +
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 4 +
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Cup &
+              Handle
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Pennant
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Double
+              Top
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Triple
+              Top
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Cup
+              and Handle
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Ascending Triangle
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Descending Triangle
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Rounding Bottom
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Falling Wedge
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Head
+              Shoulder's Top
+              <span />
+            </label>
+
+            {/*}
+            </div>*/}
+
+            {/* PLan to change these to radio buttons and add more patterns*/}
+            {/*plan to also add a link here so that I can quickly look at news*/}
+            <h4>Industry and Stock News:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Hot
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Warm
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Cold
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Shit
+              <span />
+            </label>
+
+            <h4>Action:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Buy
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Sell
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Short
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 30
+              Days
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 60
+              Days
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 90
+              Days
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> 120
+              Days
+              <span />
+            </label>
+
+            <h4>Type:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Established
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> IPO
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Penny
+              Stock
+              <span />
+            </label>
+
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>
+                <h4>Explain Reasoning of Selection:</h4>
+              </Form.Label>
+              <Form.Control as="textarea" rows="5" />
+            </Form.Group>
+          </Form>
 
           <Row>
             <Col>
-              <Button
-                style={buttonstyle}
-                // onClick={function() {
+              <button class="submitbutton"
+        
+                // onClick=function() {
                 //   console.log("saving predictions");
                 //   MyJsonService.savePredictions([
                 //     {
@@ -72,17 +238,14 @@ function App() {
                 //       updated: "Yesterday"
                 //     }
                 //   ]);
-                // }}
-              >
-                Submit
-              </Button>
+                // *}
+              
+                >Submit
+              </button>
             </Col>
           </Row>
         </Jumbotron>
       </Container>
-      <Card>
-        <div>Will Something go here?</div>
-      </Card>
     </div>
   );
 }

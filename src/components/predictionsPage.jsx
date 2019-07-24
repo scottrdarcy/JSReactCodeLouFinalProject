@@ -41,6 +41,7 @@ class PredictionsPage extends React.Component {
         newState.predictions.push({
           isEditMode: true,
           created: new Date().toTimeString(),
+          updated: new Date().toTimeString(),
           id: new Uuid()
         });
         return newState;
