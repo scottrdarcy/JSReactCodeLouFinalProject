@@ -1,4 +1,4 @@
-Project Description:
+## Project Description:
 
 This app is a useful tool for anyone that trades stocks.  It comes in handy when you are out and about, and you hear a good stock tip.  When the app is fully functional, it will allow the user to simply take his phone out of his pocket and record a good stock tip.  A recorded stock can also be classified so that that person can deploy there customized strategy for how to take action on that selection.  
 The goal is to add further fucntionality.  This app will eventually have alerts and customized tables so that trading can be done in a manner that allows the investor's to never mis out on an opportunity.  The financial industry has plenty of great tools to help you find a great pick, but the tools for classifying opportunities is limited.  
@@ -7,13 +7,13 @@ I built this because I plan to use it!
 
 
 
-Directions on How to use the App:
+## Directions on How to use the App:
 
 The app currently has limited functionality.  When the app is complete, the user will be able to enter a new Stock Ticker Symbol right into the home page.  There will also be categories so that the user can classify the stock.  Is the stock showing a certain pattern, and insdustry climate can be recorded.  Then a determination cab be made on how to treat the potential opportunity.  Shoud you look at this information again later in the year?  When everything is recorded you press submit and the data is sent to server and stored.  
 
 The app also has two other features that are in development.  The API page currently lets the user know when the market is open or closed, but later this could be customized data. The Web Development Journal is also there to record ideas and changes to the site.  This inforation is also stored offsite. 
 
-Project Requirements for Deploying the App:
+## Project Requirements for Deploying the App:
 
 To Deploy the App the following will be Required-
 1.)  Lap top
@@ -25,7 +25,7 @@ To Deploy the App the following will be Required-
 
 
 
-Additional Information:
+## Additional Information:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
