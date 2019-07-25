@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Dropdown, Card, Jumbotron } from "react-bootstrap";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Dropdown, Jumbotron } from "react-bootstrap";
 import App from "./App";
 import PredictionsPage from "./components/predictionsPage";
 import JournalPage from "./components/journalpage";

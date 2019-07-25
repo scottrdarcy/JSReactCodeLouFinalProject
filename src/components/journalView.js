@@ -39,7 +39,7 @@ function JournalView(journal, updateMode, removeEntry) {
             <Col xs="4">
               <label>{journal.topic}</label>
             </Col>
-            <Col xs="4">
+            <Col className="buttonCol" xs="4">
               <Button style={buttonStyle} onClick={remove}>
                 Remove
               </Button>
@@ -53,7 +53,7 @@ function JournalView(journal, updateMode, removeEntry) {
             <Col xs="4">
               <label>{journal.entry}</label>
             </Col>
-            <Col xs="4">
+            <Col className="buttonCol" xs="4">
               <Button style={buttonStyle} onClick={goToUpdateEntry}>
                 Edit
               </Button>
@@ -75,6 +75,17 @@ function JournalView(journal, updateMode, removeEntry) {
               <label>{journal.updated}</label>
             </Col>
           </Row>
+          <Row className="buttonRow">
+            <Col xs="5">
+              <Button className="floated" onClick={remove}>
+                Remove
+              </Button>
+            </Col>
+            
+              <Button className="floated" onClick={goToUpdateEntry}>
+                Edit
+              </Button>    
+          </Row> 
         </Container>
       </Card.Body>
     </Card>

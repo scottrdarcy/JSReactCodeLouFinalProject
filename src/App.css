@@ -132,9 +132,22 @@ div.container {
 
   .buttonRow {
     display: block;
+    margin:2px;
   }
 }
 .center {
   display: block;
   margin: 0 auto;
+}
+
+.floated {
+  float:left;
+  margin: 2px;
+  margin-right:10px;
+}
+
+#marketstyle {
+  color:black;
+  font-size:25px;
+  padding:12px;
 }

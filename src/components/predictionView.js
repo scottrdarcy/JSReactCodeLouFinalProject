@@ -37,7 +37,7 @@ function PredictionView(prediction, editMode, remove) {
             <Col xs="4">
               <label>{prediction.symbol}</label>
             </Col>
-            <Col xs="4">
+            <Col className="buttonCol" xs="4">
               <Button style={buttonStyle} onClick={removePrediction}>
                 Remove
               </Button>
@@ -50,7 +50,7 @@ function PredictionView(prediction, editMode, remove) {
             <Col xs="4">
               <label>{prediction.action}</label>
             </Col>
-            <Col xs="4">
+            <Col className="buttonCol"xs="4">
               <Button style={buttonStyle} onClick={goToEditMode}>
                 Edit
               </Button>
@@ -80,6 +80,17 @@ function PredictionView(prediction, editMode, remove) {
               <label>{prediction.updated}</label>
             </Col>
           </Row>
+          <Row className="buttonRow">
+            <Col xs="5">
+              <Button className="floated" onClick={removePrediction}>
+                Remove
+              </Button>
+            </Col>
+            
+              <Button className="floated" onClick={goToEditMode}>
+                Edit
+              </Button>    
+          </Row> 
         </Container>
       </Card.Body>
     </Card>

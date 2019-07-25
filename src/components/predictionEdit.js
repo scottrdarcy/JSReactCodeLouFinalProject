@@ -57,7 +57,7 @@ function PredictionEdit(prediction, viewMode, savePrediction) {
                 />
               </InputGroup>
             </Col>
-            <Col xs="4">
+            <Col className="buttonCol" xs="4">
               <Button style={buttonStyle} onClick={save}>
                 Save
               </Button>
@@ -118,6 +118,13 @@ function PredictionEdit(prediction, viewMode, savePrediction) {
             </Col>
             <Col xs="4">
               <label>{prediction.updated}</label>
+            </Col>
+          </Row>
+          <Row className="buttonRow">
+            <Col>
+              <Button className="center" onClick={save}>
+                Save
+              </Button>
             </Col>
           </Row>
         </Container>

@@ -61,6 +61,21 @@ function App() {
             </label>
 
             <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Solid Company Down
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Great Dividend
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Great Company Down Market
+              <span />
+            </label>
+
+            <label class=".styleforradio">
               <input type="radio" style={buttonhome} checked="checked" /> Cup &
               Handle
               <span />
@@ -203,6 +218,45 @@ function App() {
               Stock
               <span />
             </label>
+
+            <h4>Fundamentals:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Sales Growth
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Profit Growth
+              <span />
+            </label>
+
+            <h4>Financial Ratios:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Sales Margin
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Profit Margin
+              <span />
+            </label>
+
+            <h4>Market Share:</h4>
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Leader
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Gaining
+              <span />
+            </label>
+
+            <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> Losing
+              <span />
+            </label>
+
 
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>

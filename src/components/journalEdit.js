@@ -9,6 +9,8 @@ import {
   Container
 } from "react-bootstrap";
 
+/*  This function has three parameters to represent the three views that will be rendered depending on what buttons    */
+
 function JournalEdit(journal, entryViewMode, saveentry) {
   const cancel = () => {
     entryViewMode(journal.id);
@@ -20,12 +22,13 @@ function JournalEdit(journal, entryViewMode, saveentry) {
 
   const editJournal = journal;
 
+  /* The following three variables are for styling*/
   const cardStyle = {
     margin: "10px"
   };
 
   const headerStyle = {
-    float: "right"
+    float: "left"
   };
 
   const buttonStyle = {
@@ -36,6 +39,7 @@ function JournalEdit(journal, entryViewMode, saveentry) {
     margin: "2px"
   };
 
+  /* This returns the journal edit component*/
   return (
     <Card style={cardStyle}>
       <Card.Body>

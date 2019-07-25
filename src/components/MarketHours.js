@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
-const divStyle = {
-  color: "red"
-};
+
 
 class MarketHours extends Component {
   constructor() {
@@ -32,7 +30,7 @@ class MarketHours extends Component {
   }
 
   render() {
-    return <div style={divStyle}>{this.state.hours}</div>;
+    return <div id="marketstyle">{this.state.hours}</div>;
   }
 }
 

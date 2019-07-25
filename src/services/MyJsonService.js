@@ -1,5 +1,5 @@
-import React from "react";
-import Uuid from "uuid";
+
+
 
 class MyJsonService {
   static async getJournals() {
