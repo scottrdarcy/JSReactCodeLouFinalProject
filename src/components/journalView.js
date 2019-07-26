@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Table, Container, Row, Col, Card } from "react-bootstrap";
+import { Button, Container, Row, Col, Card } from "react-bootstrap";
 
 //make some type of date fuction that can be called further down the page
 

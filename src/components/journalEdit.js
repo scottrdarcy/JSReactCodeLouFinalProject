@@ -14,7 +14,7 @@ import {
 function JournalEdit(journal, entryViewMode, saveentry) {
   const cancel = () => {
     entryViewMode(journal.id);
-  };
+  }
 
   const save = () => {
     saveentry(editJournal);

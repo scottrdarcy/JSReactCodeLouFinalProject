@@ -1,4 +1,4 @@
-import React, { Root, Component } from "react";
+import React, {Component } from "react";
 import { Container, Form, Jumbotron, Col, Row } from "react-bootstrap";
 //import { }
 import "./App.css";
