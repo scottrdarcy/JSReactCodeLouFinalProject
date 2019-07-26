@@ -19,6 +19,7 @@ class JournalPage extends React.Component {
       this.setState(oldState => {
         const newState = oldState;
         const journal = newState.journal.filter(p => p.id == id)[0];
+
         journal.isEditMode = true;
         return newState;
       });
@@ -30,7 +31,6 @@ class JournalPage extends React.Component {
         newState.journal = newState.journal.filter(p => p.id != id);
 
         MyJsonService.saveJournals(newState.journal);
-
         return newState;
       });
     };

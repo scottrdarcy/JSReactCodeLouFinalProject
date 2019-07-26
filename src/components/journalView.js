@@ -28,6 +28,7 @@ function JournalView(journal, updateMode, removeEntry) {
     margin: "2px"
   };
 
+  //state 
   return (
     <Card style={cardStyle}>
       <Card.Body>

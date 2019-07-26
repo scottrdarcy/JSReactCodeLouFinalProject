@@ -9,8 +9,6 @@ const buttonhome = {
   margin: "2px"
 };
 
-
-
 function App() {
   return (
     <div class="grid-container">
@@ -61,17 +59,20 @@ function App() {
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Solid Company Down
+              <input type="radio" style={buttonhome} checked="checked" /> Solid
+              Company Down
               <span />
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Great Dividend
+              <input type="radio" style={buttonhome} checked="checked" /> Great
+              Dividend
               <span />
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Great Company Down Market
+              <input type="radio" style={buttonhome} checked="checked" /> Great
+              Company Down Market
               <span />
             </label>
 
@@ -214,6 +215,12 @@ function App() {
             </label>
 
             <label class=".styleforradio">
+              <input type="radio" style={buttonhome} checked="checked" /> New &
+              Hot
+              <span />
+            </label>
+
+            <label class=".styleforradio">
               <input type="radio" style={buttonhome} checked="checked" /> Penny
               Stock
               <span />
@@ -221,23 +228,27 @@ function App() {
 
             <h4>Fundamentals:</h4>
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Sales Growth
+              <input type="radio" style={buttonhome} checked="checked" /> Sales
+              Growth
               <span />
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Profit Growth
+              <input type="radio" style={buttonhome} checked="checked" /> Profit
+              Growth
               <span />
             </label>
 
             <h4>Financial Ratios:</h4>
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Sales Margin
+              <input type="radio" style={buttonhome} checked="checked" /> Sales
+              Margin
               <span />
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Profit Margin
+              <input type="radio" style={buttonhome} checked="checked" /> Profit
+              Margin
               <span />
             </label>
 
@@ -248,7 +259,8 @@ function App() {
             </label>
 
             <label class=".styleforradio">
-              <input type="radio" style={buttonhome} checked="checked" /> Gaining
+              <input type="radio" style={buttonhome} checked="checked" />{" "}
+              Gaining
               <span />
             </label>
 
@@ -256,7 +268,6 @@ function App() {
               <input type="radio" style={buttonhome} checked="checked" /> Losing
               <span />
             </label>
-
 
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>
@@ -268,8 +279,9 @@ function App() {
 
           <Row>
             <Col>
-              <button class="submitbutton"
-        
+              <button
+                class="submitbutton"
+
                 // onClick=function() {
                 //   console.log("saving predictions");
                 //   MyJsonService.savePredictions([
@@ -293,8 +305,8 @@ function App() {
                 //     }
                 //   ]);
                 // *}
-              
-                >Submit
+              >
+                Submit
               </button>
             </Col>
           </Row>

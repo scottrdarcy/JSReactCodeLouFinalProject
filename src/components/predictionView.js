@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, Container, Row, Col, Card } from "react-bootstrap";
 
+
+
+
 function PredictionView(prediction, editMode, remove) {
   const goToEditMode = () => {
     editMode(prediction.id);
@@ -25,6 +28,9 @@ function PredictionView(prediction, editMode, remove) {
   const rowStyle = {
     margin: "2px"
   };
+
+
+// Code was found in boostrap and modified
 
   return (
     <Card style={cardStyle}>
@@ -95,7 +101,13 @@ function PredictionView(prediction, editMode, remove) {
       </Card.Body>
     </Card>
 
-    /* <div class="predict">
+
+
+
+    /* I originally attempted to build this component with a table, but I found out that using card and grid was much 
+    easier and more resposnive
+    
+   <div class="predict">
       <Table style="position:relative">
         <tr>
           <td>

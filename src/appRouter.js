@@ -6,13 +6,7 @@ import PredictionsPage from "./components/predictionsPage";
 import JournalPage from "./components/journalpage";
 import MarketHours from "./components/MarketHours";
 
-
-
-
-
-
-
-
+/*This is the main page where everything gets rendered, react router is used to link the pages*/
 
 function Index() {
   return <h2>Home</h2>;
@@ -46,9 +40,6 @@ function AppRouter() {
       <Route path="/api" component={MarketHours} />
     </Router>
   );
-}
 
-function About() {
-  return <h1>Could not get journal to work</h1>;
 }
 export default AppRouter;
